@@ -196,7 +196,7 @@ function renderQuestion(q, displayIndex) {
 
   card.innerHTML = `
     <div class="qid">ID: ${q.id}${q.mandatory ? " &nbsp;•&nbsp; <span style='color:#f0a83a'>Mandatory</span>" : ""}</div>
-    <div class="qtext">${displayIndex + 1}. ${q.text}</div>
+    <div class="qtext">${displayIndex + 1}. ${q.text.replace(/\n/g, "<br>")}</div>
     ${optionsHtml}
     <div class="answer-banner">✅ Answer: <b>${correctLetter}. ${correctText}</b></div>
     ${imageHtml}
